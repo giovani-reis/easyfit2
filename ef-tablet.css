@@ -1,0 +1,428 @@
+/* Tablet */
+@media only screen and (min-width:597px)
+{  
+    /* menu (nav) pc*/ 
+    #menu
+    {
+        display: none;
+    }
+
+    /* Header mobile */
+    header
+    {
+        width: 100%;
+        background-color: #1f2034;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        border-radius: 0px 0px 3px 3px;
+        box-shadow: -16px 11px 20px 12px rgba(0, 0, 10, 0.4);
+        /*BOX SHADOW
+          primeiro valor: se a sombra vai ficar para a esquerda ou direita (eixo x)
+          segundo valor: se vai ficar para cima ou para baixo (eixo y)
+          terceiro valor: esfumaçamento (quanto mais px, mais esfumaçamento)
+          quarto valor: tamanho da sombra em relação a caixa
+          quinto* cor da sombra
+        */
+    }
+
+    header div 
+    {
+        width: min-content; /*faz com que a div ocupe o mínimo espaço horizontal*/
+        margin: auto; /* cenraliza o logo*/
+        margin-bottom: 15px;
+        
+    }
+
+    header div a
+    {
+
+        display: inline-flex;
+
+    }
+
+    .icone-cab, .nome-cab
+    {
+        height: 61px;
+        margin: 10px;
+    }
+
+    /*img ícone cabeçlho*/
+    .icone-cab
+    {
+        float: left;
+    }
+
+
+
+    /********************/
+    /*  CSS NAVEGATION  */
+    /********************/
+
+    #menu-m
+    {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1f2034;
+        height: 80px;   
+        visibility: hidden;
+        display: none; /*muda para block*/
+    }
+
+    #menu-m ul 
+    {
+        width: 100%;
+        display: inline-flex;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #menu-m a
+    {
+        margin: auto;
+        width: min-content;
+        text-align: center;
+        margin-bottom: 5%;
+
+    }
+
+    #menu-m p
+    {
+        font-size: 8px;
+        height: 20px;
+    }
+
+    #menu-m img 
+    {
+        height: 27px;
+        width: 27px;
+        margin: auto;
+    }
+
+    #menu-m div
+    {
+        display: inline-flex;
+        width: 100%;
+    }
+    p div
+    {
+        vertical-align: center;
+    }
+
+
+    /********************/
+    /*  CSS BOTÃO MENU  */
+    /********************/
+
+    #botao-hamburg 
+    {
+        position: fixed;
+        border-radius: 50%;
+        background-color: #3BFFF9;
+        right: 3%;
+        top: 80px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 5px;
+        box-shadow: -6px 8px 17px 4px rgba(0, 0, 10, 0.4);
+        visibility: visible;
+        cursor: pointer;
+    }
+    #botao-hamburg:hover
+    {
+        background-color: #36e4de;
+    }   
+
+
+    #botao-x
+    {
+        position: fixed;
+        border-radius: 50%;
+        background-color: #3BFFF9;
+        right: 3%;
+        top: 80px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        padding-top: 5px;
+        box-shadow: -6px 8px 17px 4px rgba(0, 0, 10, 0.4);
+        visibility: hidden;
+        cursor: pointer;
+    }
+    #botao-x:hover
+    {
+        background-color: #36e4de;
+    }
+    
+    
+    #home /*body*/
+    {
+        padding-top: 100px;
+        padding-bottom: 2px; /*js altera 76*/
+    }
+
+    #botao-x span
+    {
+        color: #1f2034;
+        font-size: 27px;
+    }
+    #botao-x span:active
+    {
+        color: #fafafa;
+    }
+
+    #botao-hamburg span
+    {
+        color: #1f2034;
+        font-size: 20px; 
+    }
+    #botao-hamburg span:active
+    {
+        color: #fafafa;
+    }
+
+    /*************************/
+    /*  CSS CORPO DA PÁGINA  */
+    /*************************/
+
+
+    /*css carrossel*/
+    figure img 
+    {
+        display: flex; /* flex para deixar tudo no eixo x (lado a lado) */
+        margin: auto; /* para deixar centralizado */
+    }
+    #carrossel 
+    {
+        margin: 0;
+        margin-top: 2%;
+    }
+    .col-1
+    {
+        height: 370px;
+        margin-bottom: 1%;
+        width: 100%;
+    }
+
+
+    /* imagens do corpo */
+    .col-3 img, .col-5 img
+    {
+        width: 47%;/*as imagens estavam muito para esquerda, isto foi feito para deixar simetrico*/
+    }
+
+    /*textos do corpo*/
+    .col-2, .col-4 /*texto*/
+    {
+        width: 47%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .col-2
+    {
+        float: left;
+        
+    }
+    .col-3 img 
+    {
+        float: right;
+    }
+
+    .col-4
+    {
+        float: right;
+    }
+    .col-5 img
+    {
+        float: left;
+    }
+
+
+
+    /*Títulos corpo*/
+    section h1
+    {
+        font-family: "titulo";
+        color: #3BFFF9;
+        font-style: italic;
+        font-size: 4.5vw;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    /*Fontes corpo*/
+    p
+    {
+        font-family: "subtit";
+        color: #FAFAFA;
+        font-size: 2.5vw;
+    }
+
+    .corpo
+    {
+        width: 100%;
+        background-color: #1f2034;
+        border-radius: 3px 3px;
+        padding-bottom: 5%;
+    }
+
+
+
+
+    /*Mapa iframe*/
+    iframe
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        border-radius: 6px;
+        height: 300px;
+    }
+
+    #ende, #form
+    {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        padding-top: 50px;
+    }
+
+
+    /*
+        FORMULARIO 
+    */
+    form 
+    {
+        margin-bottom: 0;
+        padding-bottom: 3%;
+        background-color: #fafafa;
+        border: 1px solid #3BFFF9;
+        padding-left: 0%;
+        padding-right: 0%;
+        width: fit-content;
+        margin: auto;
+    }
+
+    table
+    {
+        margin: auto;
+    }
+
+    .h2-t
+    {
+        margin-top: 5%;
+        margin-bottom: 0;
+        padding-left: 5px;
+        text-align: center;
+    }
+    
+    form .c1
+    {
+        border: 1px solid black;
+    }
+
+    td  
+    {
+        font-family: 'subtit';
+        font-size: 12px;
+    }
+
+    .tdcenter
+    {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+
+
+
+    /****************/
+    /*  CSS FOOTER  */
+    /****************/
+
+    footer 
+    {
+        background-color: #3BFFF9;
+        padding-top: 5px;
+        margin-top: 15px;
+        margin-right: -2px;
+        margin-left: -2px;
+        display: inline-flex;
+        width: 100%;
+    }
+    
+    footer section
+    {
+        display: block;
+        width: 25%;
+        float: left;
+        margin: auto;
+    }
+
+    .r-3
+    {
+        padding-left: 5%;
+    }
+
+    .h2-r
+    {
+        font-size: 3vw;
+        font-family: 'subtit', sans-serif;
+        margin-bottom: 0px;
+        color: #FAFAFA;
+        font-style: italic;
+        margin-left: 5%;
+    }
+
+    footer ul 
+    {
+        padding-left: 0;
+    }
+
+    footer li 
+    {
+        list-style: none;
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    footer a 
+    {
+        text-decoration: none;
+        font-size: 2vw;
+        color: #1f2034;
+        font-family: 'subtit';
+    }
+    footer a:hover
+    {
+        color: #FAFAFA;
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 2.05vw;
+    }
+
+    footer p 
+    {
+        color: #1f2034;
+        font-size: 2vw;
+    }
+
+
+    /*   * OUTROS...    */
+
+    :target
+    {
+        scroll-margin-top: 80px;
+    }
+
+    html
+    {
+        scroll-behavior: smooth; /*rolagem suave com velocidade padrão - ccs puro */
+    }
+    
+}

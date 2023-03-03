@@ -1,0 +1,373 @@
+
+/* Computador / Laptop */
+@media only screen and (min-width:769px) 
+{
+    #home /*body*/
+    {
+        padding-top: 100px;
+        padding-bottom: 2px
+        !important; /*js altera 76*/
+    }
+
+    /* Header mobile */
+    header
+    {
+        width: 100%;
+        background-color: #1f2034;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        border-bottom: 3px solid rgb(0, 153, 204);
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: -16px 11px 20px 12px rgba(0, 0, 10, 0.4);
+        /*BOX SHADOW
+            primeiro valor: se a sombra vai ficar para a esquerda ou direita (eixo x)
+            segundo valor: se vai ficar para cima ou para baixo (eixo y)
+            terceiro valor: esfumaçamento (quanto mais px, mais esfumaçamento)
+            quarto valor: tamanho da sombra em relação a caixa
+            quinto* cor da sombra
+        */
+    }
+
+    header div 
+    {
+        width: min-content; /*faz com que a div ocupe o mínimo espaço horizontal*/
+        margin: auto; /* cenraliza o logo*/
+        margin-bottom: 15px;
+        
+    }
+
+    header div a
+    {
+
+        display: inline-flex;
+
+    }
+
+    .icone-cab, .nome-cab
+    {
+        height: 61px;
+        margin: 10px;
+    }
+
+    /*img ícone cabeçlho*/
+    .icone-cab
+    {
+        float: left;
+    }
+
+
+
+    /**************************/
+    /*  CSS NAVEGATION (menu) */
+    /**************************/
+    
+    #menu
+    {
+        top: 97px;
+        height: 70px;
+        position: fixed;
+        display: flex;
+        width: 100%;
+    }
+
+    #menu ul
+    {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        margin: auto;
+        margin-top: 0;
+    }
+
+    #menu ul li
+    {
+        padding: 10px;
+        margin-bottom: 3px;
+        /*espaço entre um li e outro*/
+        background-color: rgb(51, 181, 229);
+        border-radius: 2px;
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 10, 0.4);
+        display: inline-block;
+    }
+
+    #menu ul li:hover /*:hover --> mouse em cima*/
+    {
+        background: linear-gradient(rgb(0, 153, 204), rgb(51, 181, 229), rgb(0, 153, 204));
+    }
+
+    #menu ul li:active /*:active --> clicando sem soltar*/
+    {
+        background: linear-gradient(to bottom, #1f2034, r#1f2034, #1f2034);
+
+    }
+
+    #menu ul li a
+    {
+        text-decoration: none;
+        color: #1f2034;
+        font-size: 2.3vw;
+        font-family: 'subtit';
+    }
+
+    #menu ul li a:active
+    {
+        color: #FAFAFA;
+    }
+
+
+
+    /****************************/
+    /*  CSS BOTÃO MENU e MENU-M */
+    /****************************/
+
+    #botao-hamburg, #botao-x, #menu-m
+    {
+
+        display: none
+        !important;
+    }
+
+    /*************************/
+    /*  CSS CORPO DA PÁGINA  */
+    /*************************/
+
+
+    /*css carrossel*/
+    figure img 
+    {
+        display: flex; /* flex para deixar tudo no eixo x (lado a lado) */
+        margin: auto; /* para deixar centralizado */
+        width: 37%;
+    }
+    #carrossel 
+    {
+        margin: 0;
+        margin-top: 5%;
+    }
+    .col-1
+    {
+        height: auto;
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+
+    /* imagens do corpo */
+    .col-3 img, .col-5 img
+    {
+        width: 43%;
+    }
+
+    /*textos do corpo*/
+    .col-2, .col-4 /*texto*/
+    {
+        width: 47%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .col-2
+    {
+        float: left;
+        
+    }
+    .col-3 img 
+    {
+        float: right;
+    }
+
+    .col-4
+    {
+        float: right;
+    }
+    .col-5 img
+    {
+        float: left;
+    }
+
+
+
+    /*Títulos corpo*/
+    section h1
+    {
+        font-family: "titulo";
+        color: #3BFFF9;
+        font-style: italic;
+        font-size: 4.5vw;
+        padding: 10px;
+        margin-bottom: 15px;
+        padding-top: 10%;
+    }
+    /*Fontes corpo*/
+    p
+    {
+        font-family: "subtit";
+        color: #FAFAFA;
+        font-size: 2.5vw;
+    }
+
+    .corpo
+    {
+        width: 100%;
+        background-color: #1f2034;
+        border-radius: 3px 3px;
+        padding-bottom: 5%;
+    }
+
+
+
+
+    /*Mapa iframe*/
+    iframe
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        border-radius: 6px;
+        height: 56vh;
+    }
+
+    #ende, #form
+    {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        padding-top: 10%;
+    }
+
+
+    /*
+        FORMULARIO 
+    */
+    form 
+    {
+        margin-bottom: 0;
+        padding-bottom: 3%;
+        background-color: #fafafa;
+        border: 1px solid #3BFFF9;
+        padding-left: 0%;
+        padding-right: 0%;
+        width: fit-content;
+        margin: auto;
+    }
+
+    table
+    {
+        margin: auto;
+    }
+
+    .h2-t
+    {
+        margin-top: 5%;
+        margin-bottom: 0;
+        padding-left: 5px;
+        text-align: center;
+    }
+    
+    form .c1
+    {
+        border: 1px solid black;
+    }
+
+    td  
+    {
+        font-family: 'subtit';
+        font-size: 12px;
+    }
+
+    .tdcenter
+    {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+
+
+
+    /****************/
+    /*  CSS FOOTER  */
+    /****************/
+
+    footer 
+    {
+        background-color: #3BFFF9;
+        padding-top: 5px;
+        margin-top: 15px;
+        margin-right: -2px;
+        margin-left: -2px;
+        display: inline-flex;
+        width: 100%;
+    }
+    
+    footer section
+    {
+        display: block;
+        width: 25%;
+        float: left;
+        margin: auto;
+    }
+
+    .r-3
+    {
+        padding-left: 5%;
+    }
+
+    .h2-r
+    {
+        font-size: 3vw;
+        font-family: 'subtit', sans-serif;
+        margin-bottom: 0px;
+        color: #FAFAFA;
+        font-style: italic;
+        margin-left: 5%;
+    }
+
+    footer ul 
+    {
+        padding-left: 5%;
+    }
+
+    footer li 
+    {
+        list-style: none;
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    footer a 
+    {
+        text-decoration: none;
+        font-size: 2vw;
+        color: #1f2034;
+        font-family: 'subtit';
+    }
+    footer a:hover
+    {
+        color: #FAFAFA;
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 2.05vw;
+    }
+
+    footer p 
+    {
+        color: #1f2034;
+        font-size: 2vw;
+    }
+
+
+    /*   * OUTROS...    */
+
+    :target
+    {
+        scroll-margin-top: 80px;
+    }
+
+    html
+    {
+        scroll-behavior: smooth; /*rolagem suave com velocidade padrão - ccs puro */
+    }
+        
+}

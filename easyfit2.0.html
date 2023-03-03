@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Easy Fit</title>
+        <link rel="sortcut icon" href="logo-icone.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Alex Pereira, Cicero Ismael, Giovani Reis, Herrison Nascimento"/>
+	
+        <link rel="stylesheet" type="text/css" href="ef-mobile.css"/>
+        <link rel="stylesheet" type="text/css" href="ef-tablet.css"/>
+        <link rel="stylesheet" type="text/css" href="ef-pc.css"/>
+
+        <style type="text/css">
+
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        @font-face
+        {
+            font-family: "titulo";
+            src: url(tit.otf);
+        }
+
+        @font-face
+        {
+            font-family: "subtit";
+            src: url(subtit.otf);
+        }
+
+        body 
+        {
+            background:linear-gradient(to top, #1f2034,#3BFFF9, #1f2034, #3BFFF9);
+			margin: 2px;
+        }
+
+
+        .nome-sect /*nome section*/
+        {
+            text-align: center;
+			padding: 5vh;
+        }
+        
+        .opcao-menu
+        {
+            display: table;
+        }
+
+
+
+        
+        </style>
+
+        <script language="JavaScript">
+
+			/*JS do Botão*/
+			function abreMenu() 
+			{
+				document.getElementById("botao-hamburg").style.visibility = "hidden";
+				document.getElementById("menu-m").style.visibility = "visible";
+				document.getElementById("home").style.paddingBottom = "81px";
+				document.getElementById("menu-m").style.display = "block";
+				document.getElementById("botao-x").style.visibility = "visible";
+
+			}
+
+			function fechaMenu() 
+			{
+				document.getElementById("botao-x").style.visibility = "hidden";
+				document.getElementById("botao-hamburg").style.visibility = "visible"; 
+				document.getElementById("menu-m").style.visibility = "hidden";
+				document.getElementById("home").style.paddingBottom = "2px";  
+				document.getElementById("menu-m").style.display = "none";  
+    		}
+
+
+			/*JS do carrossel*/
+
+			var contador = 1; //variável pública criada fora da function
+			var img1="imgDiv6.png";
+			var img2="imgDiv7.png";
+			var img3="imgDiv8.png";
+			var tempo=1900; //1800(milessegundos) : 1000 (milessegundo) = 1.8s
+			var exibir=setInterval("Exibindo()",tempo);
+			  
+			function Exibindo()
+			{
+				document.images["slide"].src=eval("img"+contador);
+						  
+				if (contador<3)
+					contador++;
+				else
+					contador=1;
+			}
+			  
+			function Anterior()
+			{
+				clearInterval(exibir);//interrompe o looping
+				
+				if (contador == 2)
+					contador = 3;
+				else if (contador ==3)
+					contador = 1;
+				else
+					contador = 2;
+				
+				clearInterval(exibir);//interrompe o looping 
+				document.images["slide"].src=eval("img"+contador);
+										  
+				if (contador<3)
+					contador++;
+				else
+					contador=1;
+						
+				exibir=setInterval("Exibindo()",tempo);
+			}
+			 
+			 function Proximo()
+			{
+				clearInterval(exibir);//interrompe o looping 
+				document.images["slide"].src=eval("img"+contador);
+						  
+				if (contador<3)
+					contador++;
+				else
+					contador=1;
+					
+				exibir=setInterval("Exibindo()",tempo);
+			}
+		</script>
+    </head>
+    <body id="home">
+
+        <!-- Cabeçalho mobile sanfonado-->
+		<header>
+            <!-- Abriga o logo e o nome-->
+            <div>
+				<!-- tag <a> permite que ao clicar na logo 
+					 do cabeçalho, volte para o início-->
+				<a href="#home">
+					<img class="icone-cab" src="logo-cabecalho.png"/>
+					<img class="nome-cab" src="nome-easyfit.png"/>
+				</a>
+            </div>
+            <!-- Barra de navegação-->
+		</header>
+
+		<!-- a barra de navegação mobile será na parte inferior-->
+		<nav id="menu-m">
+			<ul>
+				<a href="#home">
+					<div>
+						<img src="icons/home-icon.png"/>
+					</div>
+					<p>
+						Home
+					</p>
+				</a>
+
+
+				<a href="#qm-somos">
+					<div>
+						<img src="icons/qm-somos.png"/>
+					</div>
+					<p>
+						Quem Somos						
+					</p>
+				</a>
+
+
+				<a href="#nosso-trab">
+					<div>
+						<img src="icons/noss-trab.png"/>
+					</div>
+					<p>
+						Nosso Trabalho
+					</p>
+				</a>
+
+
+				<a href="#ende">
+					<div>
+						<img src="icons/loc-icon.png"/>
+					</div>
+					<p>
+						Endereço						
+					</p>
+				</a>
+
+
+				<a href="#form">
+					<div>
+						<img src="icons/inscr-icon.png"/>
+					</div>
+					<p>
+						Matrícula					
+					</p>
+				</a>
+			</ul>
+		</nav>
+
+		<nav id="menu"> <!-- menu de navegação para pc-->
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#qm-somos">Quem Somos</a></li>
+				<li><a href="#nosso-trab">Nosso Trabalho</a></li>
+				<li><a href="#ende">Endereço</a></li>
+				<li><a href="#form">Matrícula</a></li>
+			</ul>
+		</nav>
+
+        <!-- Corpo da página -->
+        <section class="corpo">
+
+            <!-- Abriga todas as sections e torna-as display table-->
+            <div class="opcao-menu">
+
+				<!-- abrir menu-->
+				<aside id="botao-hamburg" onClick="abreMenu()">
+					<span>&#9776;</span>
+				</aside>
+
+				<aside id="botao-x" onClick="fechaMenu()">
+					<span><b>&times;</b></span> 
+				</aside>
+
+				<section class="col-1">
+
+					<figure id="carrossel">
+                        <img src="imgDiv6.png" name="slide" id="slide"/>
+					</figure>
+					<!--
+					<p class="ante" onClick="Anterior()">&#60;</p>
+					<p class="prox" onClick="Proximo()">&#62;</p>
+					-->
+
+				</section>
+
+				<section class="col-2" id="qm-somos">
+					<h1>QUEM SOMOS NÓS?</h1>
+					<p>
+					   Mais que uma academia: um club! Com o melhor custo-benefício, com uma equipe dedicada a ajudar nossos 
+					   clientes no que for preciso e transformar suas metas em grandes resultados.<br/>
+					</p>
+				</section>
+
+				<section class="col-3">
+					<img src="imgDiv2.png"/>
+				</section>
+				<section class="col-4" id="nosso-trab">
+					<h1>NOSSO TRABALHO</h1>
+					<p>
+						Academia ampla e moderna, com equipamento de última geração,
+						e com o acompanhamento de professores à disposição para instruir
+						os treinos. Temos orgulho em oferecer um serviço premium, por um preço 
+						acessível, afinal o fácil acesso à atividade física pode mudar a vida
+						de qualquer idivíduo.
+					</p>
+				</section>
+				<section class="col-5">
+					<img src="imgDiv4.png"/>
+				</section>
+
+			</div>
+
+
+			
+				<!-- MAPA -->
+				<h1 id="ende">ENDEREÇO</h1>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14633.299089757642!2d-46.7277865!3d-23.5208186!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8c1d371ec31%3A0x671c9325c275132e!2sETEC%20Prof%C2%B0%20Basilides%20de%20Godoy!5e0!3m2!1spt-BR!2sbr!4v1676054865170!5m2!1spt-BR!2sbr">
+				</iframe>
+				<h1 id="form">
+					MATRICULE-SE!
+				</h1>
+
+
+				<!-- TABELA -->
+				<form action="mailto:giovani.reis@etec.sp.gov.br" method="post" enctype="text/plain">
+
+					<table> <!--Table = tabela / tr = linha / td = tanto de colunas dentro das linhas-->
+						<h2 class="h2-t">Cadastro Cliente</h2>
+						<tr><td class="c1"><label for="txtnome">Nome:&nbsp;</label></td>
+						<td class="c2"><input class="input-1" type="text" name="txtnome" placeholder="Preencha o nome completo" required /></td></tr>
+		
+						<tr><td class="c1"><label for="txtend">Endereço:&nbsp;</label></td>
+						<td class="c2"><input class="input-2"type="text" name="txtend" placeholder="Preencha o endereço completo" required /></td></tr></td>
+		
+						<tr><td class="c1"><label for="txtcida">Cidade:&nbsp;</label></td>
+						<td class="c2"><input class="input-3" type="text" name="txtcida" placeholder="Preencha o nome completo da cidade" value="São Paulo" required /></td></tr>
+		
+						<tr><td class="c1"><label for="txtuf">UF:&nbsp;</label></td>
+						<td class="c2"><select type="text" name="txtuf" placeholder="Preencha o nome completo da uf" required>
+							<option>AC</option>
+							<option>Am</option>
+							<option>AL</option>
+							<option>AP</option>
+							<option>BA</option>
+							<option>CE</option>
+							<option>DF</option>
+							<option>ES</option>
+							<option>GO</option>
+							<option>MA</option>
+							<option>MG</option>
+							<option>MS</option>
+							<option>MT</option>
+							<option>PA</option>
+							<option>PB</option>
+							<option>PI</option>
+							<option>PR</option>
+							<option>RJ</option>
+							<option>RN</option>
+							<option>RO</option>
+							<option>RR</option>
+							<option>RS</option>
+							<option>SC</option>
+							<option>SE</option>
+							<option>SP</option>
+							<option>TO</option>
+						</select></td></tr>
+						
+						<tr><td class="c1"><label for="txtcep">CEP:&nbsp;</label></td>
+						<td class="c2"><input class="input-5" type="text" name="txtcep" placeholder="Preencha o CEP"/></td></tr>
+		
+						<tr><td class="c1"><label for="txtsexo">Sexo:&nbsp;</label></td>
+						<td class="c2"><input type="radio" name="txtsexo" id="sexom" value="M"/>Masculino<br/>
+						<input type="radio" name="txtsexo" id="sexof" value="F" checked />Feminino</td></tr>
+		
+						<tr><td class="c1"><label for="txtemai">E-Mail:&nbsp;</label></td><br/>
+						<td class="c2"><input class="input-6" type="email" name="txtemai" placeholder="Preencha o E-Mail" required/></td></tr>
+						
+						<tr><td class="c1"><label for="txtdata">Data de Nascimento:&nbsp;</label></td>
+						<td class="c2"><input class="input-7" type="date" id="data" name="txtdata" /></td></tr>
+		
+						<tr>
+							<td colspan="2" class="tdcenter">
+								<input type="reset" value="Limpar" />&nbsp;
+								<input type="submit" value="Cadastrar" onClick="alert('Seus dados foram enviados com sucesso')"/>
+							</td>
+						</tr>
+		
+					</table>
+				</form>    
+
+        </section>
+
+		<!-- RODAPÉ (footer)-->
+		<footer>	
+
+			<section class="r-1"> <!-- r = rodapé -->
+				<h2 class="h2-r">
+					Redes sociais
+				</h2>
+				<ul>
+					<li><a target="_blank" href="https://www.instagram.com/easyfit_fitnessclub_/">Instagram</a></li>
+					<li><a target="_blank" href="https://www.facebook.com/easyfitn/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_transition=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0">Facebook</a></li>
+				</ul>
+			</section>
+			<section class="r-2">
+				<h2 class="h2-r">
+					Email
+				</h2>
+				<ul>
+					<li><p>easyfit.fitnessclub@gmail.com</p></li>
+				</ul>
+			</section>
+			<section class="r-3">
+				<h2 class="h2-r">
+					Telefone
+				</h2>
+				<ul>
+					<li><p>11 94832-4324</p></li>
+				</ul>
+			</section>
+
+		</footer>
+        
+    </body>
+</html>
